@@ -1,0 +1,10 @@
+@keyframes colorCycle {
+    0% { color: var(--bittersweet); }
+    33% { color: var(--emerald); }
+    66% { color: var(--picton-blue); }
+    100% { color: var(--xanthous); }
+}
+
+.colorAnimate {
+    animation: colorCycle 5s infinite linear;
+}

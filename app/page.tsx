@@ -1,8 +1,11 @@
+import {preload} from "@/lib/api";
 
-export default function Home() {
+export default async function Home() {
+    preload();
+
   return (
-      <div className='flex justify-center align-items-center m'>
-        Let's start
+      <div className='flex justify-center align-items-center mt-20'>
+          Hola
       </div>
   );
 }

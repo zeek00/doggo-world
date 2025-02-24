@@ -1,6 +1,7 @@
+import {ReactNode} from "react";
 import type { Metadata } from "next";
-import { geistSans, geistMono } from "../public/fonts/fonts";
-import "./globals.css";
+import {indieFlower} from '@/public/fonts/fonts';
+import "../styles/globals.css";
 
 
 export const metadata: Metadata = {
@@ -11,12 +12,12 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${indieFlower.className} `}
       >
         {children}
       </body>
