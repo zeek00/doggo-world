@@ -3,9 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --plain: #ffffff;
+  --bittersweet: rgba(238, 99, 82, 1);
+  --emerald: rgba(89, 205, 144, 1);
+  --picton-blue: rgba(63, 167, 214, 1);
+  --xanthous: rgba(250, 192, 94, 1);
+  --atomic-tangerine: rgba(247, 157, 132, 1);
+
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {

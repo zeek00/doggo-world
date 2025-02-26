@@ -1,4 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Indie_Flower } from "next/font/google";
+
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -11,4 +13,6 @@ const geistMono = Geist_Mono({
 });
 
 
-export { geistSans, geistMono };
+const indieFlower = Indie_Flower({ subsets: ["latin"], weight: "400" });
+
+export { geistSans, geistMono, indieFlower };
