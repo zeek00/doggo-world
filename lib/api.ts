@@ -1,3 +1,5 @@
+// noinspection ExceptionCaughtLocallyJS
+
 import {HeadersProp} from "@/lib/headers";
 import { cache } from 'react'
 import 'server-only'
