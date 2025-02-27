@@ -3,11 +3,11 @@ import Loading from "@/components/loader/Loading";
 import Pet from "@/components/Pet/Pet"
 
 type PageProps = {
-    params: {id: string};
+    params: Promise<{id: string}>;
 }
 
-export default function PetPage({params} : PageProps) {
-    const {id} = params;
+export default async function PetPage({params} : PageProps) {
+    const {id} = await params;
 
 
 
