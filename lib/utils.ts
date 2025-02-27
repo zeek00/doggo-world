@@ -4,6 +4,7 @@ import {Pet} from "@/types/pets";
 
 
 
+
 const getAllBreedGroups = async (pets: Pet[]) =>{
     const values = new Set<string>();
     pets.forEach(( pet: Pet ) => {
@@ -20,12 +21,6 @@ const getFeaturedPet = async(pets: Pet[]) => {
 
 }
 
-const getPetById = async (id: number, pets: Pet[]) => {
-    return pets.filter(( pet: Pet)=>pet.id === id)
-
-}
-
-
 const getPetCategory = async (group: string, pets: Pet[]) =>{
      return pets.filter(( pet: Pet ) => pet['breed_group'] === group)
 
@@ -34,4 +29,4 @@ const getPetCategory = async (group: string, pets: Pet[]) =>{
 
 
 
-export {getAllBreedGroups, getPetCategory, getFeaturedPet, getPetById}
+export {getAllBreedGroups, getPetCategory, getFeaturedPet}

@@ -41,7 +41,23 @@ export const preload = () => {
     }
 })
 
+const fetchPetById = cache(async (id: string) => {
+    try{
+        const res = await fetch(`https://api.thedogapi.com/v1/images/${id}`, {
+            method: 'GET',
+            headers: Headers
+        })
+        if(!res.ok){
+            throw new Error(`Failed to fetch pet Id: ${res.status} - ${res.statusText}`)
+        }
+        return res.json()
+    }catch (error){
+        console.error('Error fetching pet Id:', error);
+        return {};
+    }
+})
 
 export {
-    fetchPets
+    fetchPets,
+    fetchPetById
 }
