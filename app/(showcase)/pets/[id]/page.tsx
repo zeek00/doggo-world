@@ -6,8 +6,8 @@ type PageProps = {
     params: {id: string};
 }
 
-export default async function PetPage({params} : PageProps) {
-    const {id} = await params;
+export default  function PetPage({params} : PageProps) {
+    const {id} = params;
 
 
 
