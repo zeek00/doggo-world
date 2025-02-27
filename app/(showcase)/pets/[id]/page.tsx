@@ -6,7 +6,7 @@ type PageProps = {
     params: {id: string};
 }
 
-export default  function PetPage({params} : PageProps) {
+export default function PetPage({params} : PageProps) {
     const {id} = params;
 
 
