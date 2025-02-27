@@ -3,7 +3,6 @@
     flex-flow: row wrap;
     gap: 1rem;
 }
-
 .imageBox{
     max-width: 50%;
     height: auto;
