@@ -1,7 +1,6 @@
 "use client"
 import { motion } from "framer-motion";
 import styles from './Nav.module.css'
-import {links} from "@/data/data";
 import {ButtonProps} from "@/types/props";
 import Button from "@/components/ui/Button/Button";
 
@@ -10,6 +9,12 @@ const navVariants = {
     visible: { x: 0 },
     exit: { x: "-100%" },
 };
+
+const links: ButtonProps[] = [
+    {to:'about', hoverColor:'hover:bg-[var(--peach-shade)]', borderColor:'border-[var(--peach-shade)]'},
+    {to:'pets', hoverColor:'hover:bg-[var(--green-shade)]', borderColor:'border-[var(--green-shade)]'},
+    {to:'breeds', hoverColor:'hover:bg-[var(--yellow-shade)]', borderColor:'border-[var(--yellow-shade)]'},
+];
 
 export default function LeftNav({closeNav}: { closeNav: () => void }) {
     return (
