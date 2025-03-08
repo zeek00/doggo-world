@@ -7,7 +7,6 @@ import Link from "next/link";
 
 const AllPets = async() => {
     const allPets = await  fetchPets()
-    console.log(allPets)
 
     return (
         <div className={styles.all}>

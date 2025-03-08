@@ -6,8 +6,8 @@ export default async function Home() {
 
     return (
         <div className='flex justify-center align-items-center mt-20'>
-            Hola
-            <Loading/>
+            Dev in progress
+            <Loading />
         </div>
     );
 }

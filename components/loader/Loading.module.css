@@ -1,31 +1,29 @@
-@keyframes customBounce {
-    0%, 100% {
+@keyframes bounceThenSpin {
+    0%, 8%, 30% {
         transform: translateY(0);
     }
-    50% {
+    5% {
         transform: translateY(-15px);
     }
-}
-
-@keyframes colorCycle {
-    0% { color: var(--bittersweet); }
-    33% { color: var(--emerald); }
-    66% { color: var(--picton-blue); }
-    100% { color: var(--xanthous); }
-}
-
-@keyframes logoSpin {
-    from {
+    20% {
+        transform: translateY(-18px);
+    }
+    18% {
+        transform: translateY(0);
+    }
+    40% {
         transform: rotate(0deg);
     }
-    to {
+    100% {
         transform: rotate(360deg);
     }
 }
 
+
+
+
+
 .colorAnimate {
     animation:
-            customBounce 0.8s ease-in-out 2,
-            logoSpin .3s linear 1.4s,
-            colorCycle 5s infinite linear;
+            bounceThenSpin 2s ease-in-out infinite, var(--color-cycle-animation);
 }

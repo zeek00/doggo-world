@@ -4,14 +4,21 @@
 
 :root {
   --plain: #ffffff;
-  --bittersweet: rgba(238, 99, 82, 1);
-  --emerald: rgba(89, 205, 144, 1);
-  --picton-blue: rgba(63, 167, 214, 1);
-  --xanthous: rgba(250, 192, 94, 1);
-  --atomic-tangerine: rgba(247, 157, 132, 1);
-
+  --red-shade: crimson;
+  --green-shade: rgba(89, 205, 144, 1);
+  --blue-shade: rgba(63, 167, 214, 1);
+  --yellow-shade: rgba(250, 192, 94, 1);
+  --peach-shade: rgba(247, 157, 132, 1);
+  --border-radius: 1.7rem;
+  --color-cycle-animation: colorCycle 5s linear infinite;
 }
 
+@keyframes colorCycle {
+  0% { color: var(--red-shade); }
+  33% { color: var(--green-shade); }
+  66% { color: var(--blue-shade); }
+  100% { color: var(--yellow-shade); }
+}
 
 @media (prefers-color-scheme: dark) {
   :root {

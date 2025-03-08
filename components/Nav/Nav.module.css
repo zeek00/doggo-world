@@ -1,0 +1,82 @@
+
+.desktopNav {
+    justify-content: space-around;
+    background: #191970;
+    color: white;
+    padding: 0;
+    height: auto;
+    /*border-radius: var(--border-radius);*/
+    margin: 0 auto;
+    /*border: 1px solid var(--blue-shade);*/
+    /*box-shadow: 3px 3px 2px 1px var(--blue-shade);*/
+}
+
+.overlay {
+    pointer-events: none; /* Prevents the overlay from blocking LeftNav */
+}
+
+
+.mobileNav{
+    width: 100%;
+    background: #191970;
+    color: var(--foreground);
+    z-index: 30;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid #fff;
+    padding: 0;
+
+}
+
+.mobileNav span{
+    padding: 0 1rem;
+}
+
+.burger{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+    font-size: 2rem;
+    transform: scale(1);
+    animation: var(--color-cycle-animation);
+}
+
+.desktopNav .btn{
+    display: flex;
+    gap: 15px;
+}
+
+.leftNav{
+    position: absolute;
+    left: -2px;
+    z-index: 3;
+    top: 3.6rem;
+    width: 50%;
+    background: #191970;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: left 0.3s ease-in-out;
+    pointer-events: auto;
+
+}
+
+
+.btnLinks{
+    color: white;
+    padding: 0 0.5rem;
+}
+
+
+
+@media screen and (max-width: 640px) {
+    .desktopNav{display: none;}
+    .mobileNav{display: flex;}
+    
+}
+
+@media screen and (min-width: 641px) {
+    .desktopNav{display: flex;}
+    .mobileNav{display: none;}
+}
