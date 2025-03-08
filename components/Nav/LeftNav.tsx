@@ -19,7 +19,7 @@ export default function LeftNav({closeNav}: { closeNav: () => void }) {
             exit="exit"
             variants={navVariants}
             transition={{duration: 0.3, ease: "easeInOut"}}
-            className={`${styles.leftNav} fixed top-0 left-0 w-64 bg-gray-900 text-white z-60 shadow-lg`}
+            className={`${styles.leftNav} fixed top-10 left-0 w-64 text-white z-60 shadow-lg`}
             onClick={(e) => e.stopPropagation()}
         >
 
