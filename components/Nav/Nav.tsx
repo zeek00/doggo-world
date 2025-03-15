@@ -7,7 +7,7 @@ import {ButtonProps} from "@/types/props";
 const links: ButtonProps[] = [
     {to:'about', hoverColor:'hover:bg-[var(--peach-shade)]', borderColor:'border-[var(--peach-shade)]'},
     {to:'pets', hoverColor:'hover:bg-[var(--green-shade)]', borderColor:'border-[var(--green-shade)]'},
-    {to:'breeds', hoverColor:'hover:bg-[var(--yellow-shade)]', borderColor:'border-[var(--yellow-shade)]'},
+    {to:'breeds', hoverColor:'hover:bg-[var(--red-shade)]', borderColor:'border-[var(--red-shade)]'},
 ];
 
 export default function Nav() {
@@ -18,7 +18,7 @@ export default function Nav() {
         <>
             <div className={styles.desktopNav}>
 
-                    <span>
+                    <span className={styles.logo}>
                         <Logo/>
                     </span>
 

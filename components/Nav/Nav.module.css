@@ -1,14 +1,15 @@
 
 .desktopNav {
     justify-content: space-around;
-    background: #191970;
-    color: white;
+    width: 90%;
+    background: var(--blue-shade);
+    color: var(--plain);
     padding: 0;
     height: auto;
-    /*border-radius: var(--border-radius);*/
-    margin: 0 auto;
+    border-radius: var(--border-radius);
+    margin: 1rem auto;
     /*border: 1px solid var(--blue-shade);*/
-    /*box-shadow: 3px 3px 2px 1px var(--blue-shade);*/
+    box-shadow: 1px 1px 4px 1px var(--peach-shade);
 }
 
 .overlay {
@@ -18,12 +19,12 @@
 
 .mobileNav{
     width: 100%;
-    background: #191970;
-    color: var(--foreground);
+    background: var(--blue-shade);
+    color: var(--plain);
     z-index: 30;
     display: flex;
     justify-content: space-between;
-    border: 2px solid #fff;
+    box-shadow: 1px 1px 4px 1px var(--peach-shade);
     padding: 0;
 
 }
@@ -39,7 +40,7 @@
     padding: 0 1rem;
     font-size: 2rem;
     transform: scale(1);
-    animation: var(--color-cycle-animation);
+    color: var(--plain);
 }
 
 .desktopNav .btn{
@@ -53,7 +54,7 @@
     z-index: 3;
     top: 3.6rem!important;
     width: 50%;
-    background: #191970;
+    background: var(--blue-shade);
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -62,9 +63,8 @@
 
 }
 
-
 .btnLinks{
-    color: white;
+    color: var(--plain);
     padding: 0 0.5rem;
 }
 

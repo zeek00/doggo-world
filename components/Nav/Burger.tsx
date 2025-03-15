@@ -27,7 +27,7 @@ export default function Burger() {
                     >
 
                         <div className="relative w-full h-full flex">
-                            <LeftNav closeNav={() => setOpen(false)}/>
+                            <LeftNav closeNavAction={() => setOpen(false)}/>
                         </div>
 
                     </motion.div>

@@ -3,23 +3,41 @@ import type { Metadata } from "next";
 import {indieFlower} from '@/public/fonts/fonts';
 import "../styles/globals.css";
 import Nav from "@/components/Nav/Nav";
+import Footer from "@/components/Footer/Footer";
 
 
 export const metadata: Metadata = {
   title: "Doggo World",
   description: "A Dog showcase",
+    icons: [
+        { rel: "icon", url: "/favicon.ico", sizes: "any" },
+        { rel: "apple-touch-icon", url: "/apple-icon.png" },
+        { rel: "icon", url: "/favicon.png", type: "image/png" }
+    ],
 };
+
+
 
 export default function RootLayout({children}: { children: ReactNode }) {
   return (
-    <html lang="en">
-      <body
-        className={`${indieFlower.className} `}
-      >
-      <Nav />
+      <html lang="en">
+      <body className={`${indieFlower.className} flex flex-col min-h-screen`}>
+          <span className=" top-0 w-full z-10">
+            <Nav/>
+          </span>
 
-        {children}
+
+          <main className="flex-grow ">
+              <section>
+                  {children}
+              </section>
+          </main>
+
+          <span className="mt-auto">
+            <Footer/>
+          </span>
+
       </body>
-    </html>
+      </html>
   );
 }

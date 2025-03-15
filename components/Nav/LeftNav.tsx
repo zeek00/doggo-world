@@ -11,12 +11,13 @@ const navVariants = {
 };
 
 const links: ButtonProps[] = [
+    {to:'featured', hoverColor:'hover:bg-[var(--yellow-shade)]', borderColor:'border-[var(--yellow-shade)]'},
     {to:'about', hoverColor:'hover:bg-[var(--peach-shade)]', borderColor:'border-[var(--peach-shade)]'},
     {to:'pets', hoverColor:'hover:bg-[var(--green-shade)]', borderColor:'border-[var(--green-shade)]'},
-    {to:'breeds', hoverColor:'hover:bg-[var(--yellow-shade)]', borderColor:'border-[var(--yellow-shade)]'},
+    {to:'breeds', hoverColor:'hover:bg-[var(--red-shade)]', borderColor:'border-[var(--red-shade)]'},
 ];
 
-export default function LeftNav({closeNav}: { closeNav: () => void }) {
+export default function LeftNav({closeNavAction}: { closeNavAction: () => void }) {
     return (
         <motion.div
             initial="hidden"
@@ -38,7 +39,7 @@ export default function LeftNav({closeNav}: { closeNav: () => void }) {
                                animate={{opacity: 1, x: 0}}
                                transition={{delay: index * 0.1, duration: 0.3}}
                            >
-                               <Button key={link.to} type='lNav' to={link.to} close={closeNav}
+                               <Button key={link.to} type='lNav' to={link.to} close={closeNavAction}
                                        borderColor={link.borderColor}/>
                            </motion.div>
                        ))

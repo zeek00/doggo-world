@@ -5,7 +5,7 @@ export interface Pet {
     breed_group?: string;
     life_span: string;
     origin?: string;
-    reference_image_id?: string;
+    reference_image_id: string;
     temperament?: string;
     height: {
         imperial: string;

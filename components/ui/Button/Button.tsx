@@ -17,9 +17,8 @@ export default function Button({type,to,hoverColor, borderColor, close} : LinkPr
             {
                 type === 'featured' &&
                 <span className={` 
-                    ${styles.links}
+                   
                     ${styles.featureBtn}
-                    border-[var(--red-shade)]
                     border rounded-md
                     `}
                 >

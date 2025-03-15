@@ -1,0 +1,58 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: fit-content;
+    color: var(--plain);
+    border-radius: var(--border-radius);
+    background: var(--red-shade);
+    padding: 1rem 0;
+}
+
+
+.imageBox{
+    position: relative;
+    min-width: 150px;
+    min-height: 100px;
+    border: 1px solid white;
+
+}
+.imageBox .image{
+    object-fit: cover;
+
+}
+
+.detailsBox{
+    color: var(--plain);
+    padding: 0.7rem 0;
+    text-align: center
+
+}
+.detailsBox h2{
+    font-size: 1rem;
+}
+.detailsBox p{
+    font-size: 0.9rem;
+}
+.detailsBox .breedGroup{
+    color: var(--blue-shade);
+    text-decoration: underline;
+
+
+}
+
+.actionBox{
+    background: var(--green-shade);
+    padding: 0 0.7rem;
+    border-radius: var(--border-radius);
+    color: var(--plain);
+    transition: 0.5s ease-in-out;
+    transform: scale(1);
+}
+
+.actionBox:hover{
+    box-shadow: 1px 1px 4px 1px var(--plain);
+    font-size: 1.1rem;
+}
+

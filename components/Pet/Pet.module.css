@@ -1,7 +1,35 @@
 .all{
     display: flex;
+    flex-flow: column wrap;
+    gap: 0.4rem;
+}
+.card{
+    display: flex;
     flex-flow: row wrap;
+    justify-content: center;
     gap: 1rem;
+}
+.pagination{
+    display: flex;
+    padding: 0 0.9rem;
+    justify-content: center;
+    gap: 0.4rem;
+}
+.pagination button{
+    background: var(--yellow-shade);
+    padding: 0 0.8rem;
+    margin-bottom: 0.5rem;
+    border-radius: var(--border-radius);
+    color: var(--plain);
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: scale(1);
+}
+
+.pagination button:hover{
+    box-shadow: 1px 1px 4px 1px var(--background);
+
+
 }
 .imageBox{
     max-width: 50%;

@@ -27,9 +27,14 @@
     font-size: 2rem;
 }
 
-
+@keyframes colorCycle {
+    0% { color: var(--red-shade); }
+    33% { color: var(--green-shade); }
+    66% { color: var(--blue-shade); }
+    100% { color: var(--yellow-shade); }
+}
 
 .colorAnimate {
     animation:
-            bounceThenSpin 2s ease-in-out infinite, var(--color-cycle-animation);
+            bounceThenSpin 2s ease-in-out infinite, colorCycle 5s linear infinite ;
 }

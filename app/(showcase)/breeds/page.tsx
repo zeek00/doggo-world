@@ -1,4 +1,6 @@
 
+import Breeds from "@/components/Breeds/Breeds";
+
 export default function BreedsPage(){
-    return <p>breeds</p>
+    return <Breeds />
 }
