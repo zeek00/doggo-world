@@ -59,7 +59,7 @@ const fetchPetById = cache(async (id: string) => {
 
 const  fetchFeaturedPet  = cache(async (pets:Pet[])=>{
     const randomId = Math.floor(Math.random() * pets.length) - 1;
-    let pet = pets.find(( pet: Pet)=> pet === pets[randomId])
+    const pet = pets.find(( pet: Pet)=> pet === pets[randomId])
     try{
         const res = await fetch(`https://api.thedogapi.com/v1/images/${pet?.reference_image_id}`, {
             method: 'GET',

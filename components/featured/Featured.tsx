@@ -43,21 +43,21 @@ const Featured = async ()=>{
                             {pet.bred_for &&
                                 <span className={styles.bredFor}>
                                     <label>Bred for:</label>
-                                    <p>"{pet.bred_for}"</p>
+                                    <p>{`"${pet.bred_for}"`}</p>
                                 </span>
                             }
 
                             {pet.life_span &&
                                 <span className={styles.lifeSpan}>
                                     <label>Life Span:</label>
-                                    <p>"{pet.life_span}"</p>
+                                    <p>{`${pet.life_span}`}</p>
                                 </span>
                             }
 
                             {pet.temperament &&
                                 <span className={styles.temperament}>
                                     <label>Temperament:</label>
-                                    <p>"{pet.temperament}"</p>
+                                    <p>{`"${pet.temperament}"`}</p>
                                 </span>
                             }
                         </span>
