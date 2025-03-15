@@ -3,14 +3,20 @@ import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
 import {breedGroups} from "@/data/data";
+import {fetchPets} from "@/lib/api";
+import {getAllBreedGroups} from "@/lib/utils";
 
-export default  function Breeds() {
+export default  async function Breeds() {
+    try {
+        const pets = await fetchPets();
+        const groups = await getAllBreedGroups(pets)
 
         return (
             <div className={styles.container}>
-                {
+                 { groups &&
                     Object.entries(breedGroups).map(([group, data]) => (
-                        <span key={group} className={`${styles.card} bg-gradient-to-l from-[var(--yellow-shade)]  to-[var(--green-shade)] text-transparent `}>
+                        <span key={group}
+                              className={`${styles.card} bg-gradient-to-l from-[var(--yellow-shade)]  to-[var(--green-shade)] text-transparent `}>
                             <h1>Discover</h1>
                             <h2>{group}</h2>
                             <span className={styles.img}>
@@ -19,12 +25,13 @@ export default  function Breeds() {
                                     alt="svg-img"
                                     width={150}
                                     height={150}
-                                    className="w-16 sm:w-20 md:w-22 lg:w-24 xl:w-28 h-auto"
+                                    className="w-28 sm:w-28 md:w-28 lg:w-28 xl:w-32 h-auto"
+                                    priority
                                 />
                             </span>
                             <span className={styles.discover}>
                                 <Link href={`breeds/${group}`}>
-                                    <FaArrowRight />
+                                    <FaArrowRight/>
                                 </Link>
                             </span>
 
@@ -34,6 +41,8 @@ export default  function Breeds() {
             </div>
         )
 
-
+    }catch (error) {
+        console.error("Error fetching featured breeds:", error);
+    }
 
 }

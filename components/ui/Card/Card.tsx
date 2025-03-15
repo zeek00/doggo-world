@@ -8,7 +8,6 @@ export default async function Card(pet: Pet){
     try{
         const petObject = await fetchPetById(pet.reference_image_id)
         if (!petObject) return <p className="text-center text-[#FAC05E] text-lg">pet unavailable</p>;
-        console.log(petObject.breeds);
         return (
             <div className={styles.container}>
                 <span className={styles.imageBox}>
