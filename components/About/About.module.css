@@ -1,9 +1,9 @@
 .container {
     display: flex;
     flex-direction: column;
-    margin: 5vh auto;
     justify-content: center;
     align-items: center;
+    padding: 3rem 0;
 }
 
 
@@ -19,10 +19,25 @@
     display: none;
 }
 
+@media screen and (max-width: 576px ){
+    .container {
+        margin: 4rem auto;
+    }
+}
 
 
+@media screen and (max-width: 768px ){
+    .container {
+
+        padding: 3rem 0;
+    }
+}
 
 @media screen and (min-width: 968px ){
+    .container {
+        margin: 0 auto;
+        padding: 4rem 0;
+    }
     .container .desktop{
         display: flex;
         flex-direction: column;

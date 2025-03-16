@@ -10,7 +10,6 @@ export default function About() {
             <span className={styles.mobile}>
                 <Image src={'svg/about-mobile.svg'} alt={'about us'} width={500} height={700} priority/>
             </span>
-
         </div>
-    )
+    );
 }
