@@ -50,5 +50,15 @@
     width: 100%;
     color: var(--plain);
     padding: 1rem 0;
+    transform: scale(1);
+    transition: 0.5s ease-in-out;
 }
 
+@media screen and (max-width: 578px){
+    .linkContainer{
+        display: flex;
+        margin: 1rem auto;
+        padding: 0;
+    }
+
+}
