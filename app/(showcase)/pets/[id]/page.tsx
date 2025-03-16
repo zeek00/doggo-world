@@ -1,6 +1,7 @@
 import {Suspense} from "react";
 import Loading from "@/components/loader/Loading";
-import Pet from "@/components/Pet/Pet"
+import {fetchPetById} from "@/lib/api";
+import Featured from "@/components/featured/Featured";
 
 type PageProps = {
     params: Promise<{id: string}>;
@@ -8,14 +9,19 @@ type PageProps = {
 
 export default async function PetPage({params} : PageProps) {
     const {id} = await params;
+    try {
+        const petObject = await fetchPetById(id)
+        if (!petObject) return <p className="text-center text-[#FAC05E] text-lg">pet unavailable</p>;
 
 
-
-    return (
-        <Suspense fallback={<Loading />}>
-            <Pet id={id} />
-        </Suspense>
-    );
-
+        return (
+            <Suspense fallback={<Loading/>}>
+                <Featured featured={petObject}/>
+            </Suspense>
+        );
+    }catch (error){
+        console.error("Error fetching pet id:", error);
+        return <p className="text-center text-red-400">Failed to load pet.</p>;
+    }
 
 }

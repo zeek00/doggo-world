@@ -35,3 +35,12 @@ export type Breed = {
         metric: string;
     }
 };
+
+
+export type FeaturedProp = {
+    breeds: Breed[];
+    height: number
+    id: string;
+    url: string,
+    width: number
+}

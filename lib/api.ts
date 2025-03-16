@@ -12,7 +12,6 @@ const Headers : HeadersProp = {
 
 export const preload = () => {
     void fetchPets(0,10)
-    console.log('...data preloaded !')
 }
 
 

@@ -1,17 +1,13 @@
-import {fetchFeaturedPet, fetchPets} from "@/lib/api";
+// import {fetchFeaturedPet, fetchPets} from "@/lib/api";
 import styles from './Featured.module.css'
 import Image from "next/image";
-import {Breed} from "@/types/pets";
+import {Breed, FeaturedProp} from "@/types/pets";
 import { FaHeart } from "react-icons/fa";
 import Link from "next/link";
 
 
-const Featured = async ()=>{
+const Featured = async ({featured}: { featured: FeaturedProp })=>{
 
-    try{
-        const pets = await fetchPets(0,10)
-        const featured = await fetchFeaturedPet(pets);
-        if (!featured) return <p className="text-center text-[#FAC05E] text-lg">No featured pet available</p>;
 
         return (
             <div className={styles.mobile}>
@@ -66,11 +62,6 @@ const Featured = async ()=>{
             </div>
         );
 
-    }catch(error){
-        console.error("Error fetching featured pet:", error);
-        return <p className="text-center text-red-400">Failed to load featured pet.</p>;
-
-    }
 
 
 }
