@@ -47,6 +47,8 @@
 }
 
 .lNav{
+    width: 100%;
     color: var(--plain);
-    padding: 0 0.7rem;
+    padding: 1rem 0;
 }
+

@@ -30,8 +30,8 @@ export default function Button({type,to,hoverColor, borderColor, close} : LinkPr
 
             {
                 type === 'lNav' &&
-                <span className={`${styles.links} ${styles.lNav} border-l-4 ${borderColor}`}>
-                    <Link href={`/${to}`} onClick={close}>{to}</Link>
+                <span className={` ${styles.lNav} ${hoverColor} border-l-4 ${borderColor} `}>
+                    <Link href={`/${to}`}  onClick={close}>{to}</Link>
                 </span>
             }
 

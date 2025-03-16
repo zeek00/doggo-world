@@ -39,7 +39,7 @@ export default function LeftNav({closeNavAction}: { closeNavAction: () => void }
                                animate={{opacity: 1, x: 0}}
                                transition={{delay: index * 0.1, duration: 0.3}}
                            >
-                               <Button key={link.to} type='lNav' to={link.to} close={closeNavAction}
+                               <Button key={link.to} type='lNav' to={link.to} hoverColor={link.hoverColor} close={closeNavAction}
                                        borderColor={link.borderColor}/>
                            </motion.div>
                        ))
