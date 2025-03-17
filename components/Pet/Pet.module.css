@@ -1,3 +1,12 @@
+.container {
+    padding: 0 0 1rem 0;
+}
+.container h1{
+    font-size: 2rem;
+    display: flex;
+    color: #6e6767;
+    justify-content: center;
+}
 .all{
     display: flex;
     flex-flow: column wrap;
@@ -7,6 +16,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    padding: 1rem 0;
     gap: 1rem;
 }
 .pagination{

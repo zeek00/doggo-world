@@ -6,7 +6,7 @@
     height: fit-content;
     color: var(--plain);
     border-radius: var(--border-radius);
-    background: var(--red-shade);
+    background-color: var(--red-shade);
     padding: 1rem 0;
 }
 
@@ -33,10 +33,11 @@
     font-size: 1rem;
 }
 .detailsBox p{
-    font-size: 0.9rem;
+    font-size: 1.1rem;
 }
 .detailsBox .breedGroup{
     color: var(--blue-shade);
+    cursor: pointer;
     text-decoration: underline;
 
 

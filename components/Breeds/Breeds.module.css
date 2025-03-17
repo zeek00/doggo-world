@@ -4,6 +4,7 @@
     justify-content: center;
     gap: 1rem;
     color: var(--plain);
+    padding-bottom: 1rem;
 }
 
 .card{
