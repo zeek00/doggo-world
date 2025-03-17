@@ -14,6 +14,8 @@ export default async function PetGroupPage({params} : PageProps) {
     try{
         const pets = await fetchPets();
         const petGroups = await getPetsByGroup(group, pets)
+        if (!petGroups) return <p className="text-center text-[#FAC05E] text-lg">pet group unavailable</p>;
+
         console.log(petGroups);
         return (
             <Suspense fallback={<Loading />}>
@@ -29,6 +31,8 @@ export default async function PetGroupPage({params} : PageProps) {
 
         );
     }catch(error){
+        console.error("Error fetching  pet group:", error);
+        return <p className="text-center text-red-400">Failed to load pet group.</p>;
 
     }
 
