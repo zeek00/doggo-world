@@ -28,9 +28,7 @@ export default function RootLayout({children}: { children: ReactNode }) {
 
 
           <main className="flex-grow ">
-              <section>
                   {children}
-              </section>
           </main>
 
           <span className="mt-auto">

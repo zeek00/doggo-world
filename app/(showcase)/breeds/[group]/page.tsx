@@ -19,7 +19,6 @@ export default async function PetGroupPage({params} : PageProps) {
         return (
             <Suspense fallback={<Loading />}>
                 <div className={styles.container}>
-                    <h1>{group}</h1>
                     <div className={styles.card}>
                         {petGroups.map((pet) => (
                             <span key={pet.id} >
