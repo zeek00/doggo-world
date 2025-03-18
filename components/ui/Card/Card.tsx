@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {fetchPetById} from "@/lib/api";
 
-export default async function Card(pet: Pet){
+export default async function Card({pet, path}: { pet: Pet, path: string }) {
     try{
         const petObject = await fetchPetById(pet.reference_image_id)
         if (!petObject) return <p className="text-center text-[#FAC05E] text-lg">pet unavailable</p>;
@@ -30,7 +30,9 @@ export default async function Card(pet: Pet){
                     ))
                 }
                 <span className={styles.actionBox}>
-                    <Link href={`pets/${petObject.id}`}>Learn More</Link>
+                   { path === 'pets' && <Link href={`${path}/${petObject.id}`}>Learn More</Link> }
+                    { path === 'breeds' && <Link href={`../pets/${petObject.id}`}>Learn More</Link> }
+
                 </span>
 
             </div>

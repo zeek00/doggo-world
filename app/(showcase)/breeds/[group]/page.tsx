@@ -16,14 +16,16 @@ export default async function PetGroupPage({params} : PageProps) {
         const petGroups = await getPetsByGroup(group, pets)
         if (!petGroups) return <p className="text-center text-[#FAC05E] text-lg">pet group unavailable</p>;
 
-        console.log(petGroups);
         return (
             <Suspense fallback={<Loading />}>
                 <div className={styles.container}>
                     <h1>{group}</h1>
                     <div className={styles.card}>
                         {petGroups.map((pet) => (
-                            <Card key={pet.id} {...pet} />
+                            <span key={pet.id} >
+                                <Card pet={pet} path={'breeds'}/>
+
+                            </span>
                         ))}
                     </div>
                 </div>

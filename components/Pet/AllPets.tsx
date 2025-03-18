@@ -14,7 +14,10 @@ const AllPets = async({page}: { page: string }) => {
             <div className={styles.all}>
                 <div className={styles.card}>
                     {allPets.map((pet) => (
-                        <Card key={pet.id} {...pet} />
+                        <span key={pet.id}>
+                                <Card pet={pet} path={'pets'}/>
+
+                            </span>
                     ))}
                 </div>
 
