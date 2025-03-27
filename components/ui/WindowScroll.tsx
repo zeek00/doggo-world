@@ -7,14 +7,13 @@ const ScrollToTop = () => {
     const [isVisible, setIsVisible] = useState(false);
 
     const handleScroll = () => {
-        // Show the button when the user has scrolled down 100 pixels
         setIsVisible(window.scrollY > 100);
     };
 
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth', // Smooth scroll to top
+            behavior: 'smooth',
         });
     };
 
