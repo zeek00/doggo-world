@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: var(--peach-shade);
+    border: 1px solid #ccc;
+    background-color: var(--plain);
+    border-radius: var(--border-radius);
+    padding: 0.1rem 0.5rem;
+    width: fit-content;
+
+
+}
+
+.search{
+    all: unset;
+    border: none;
+    padding: 0.1rem 0.3rem;
+}
+
+.icon{
+    cursor: pointer;
+}

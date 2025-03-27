@@ -3,17 +3,16 @@ import {fetchPets} from "@/lib/api";
 import styles from  './Pet.module.css'
 import Card from "@/components/ui/Card/Card";
 import Link from "next/link";
-
+import {Pet} from "@/types/pets"
 
 const AllPets = async({page}: { page: string }) => {
     try{
         const pages = Number(page) || 1; // Get page number from URL
-        const allPets = await fetchPets(pages, 20); //
-
+        const allPets = await fetchPets(pages, 21); //
         return (
             <div className={styles.all}>
                 <div className={styles.card}>
-                    {allPets.map((pet) => (
+                    {allPets.map((pet:Pet) => (
                         <span key={pet.id}>
                                 <Card pet={pet} path={'pets'}/>
 
@@ -30,7 +29,7 @@ const AllPets = async({page}: { page: string }) => {
                             <button>{'<'}</button>
                         </Link>
                     )}
-                    {allPets.length === 19 && (
+                    {allPets.length === 20 && (
                         <Link href={`?page=${pages + 1}`}>
                             <button> {'>'} </button>
                         </Link>

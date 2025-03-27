@@ -74,9 +74,28 @@ const  fetchFeaturedPet  = cache(async (pets:Pet[])=>{
         return [];
     }
 })
+const  fetchQueryResult  = cache(async (query: string)=>{
+
+    try{
+        const res = await fetch(`https://api.thedogapi.com/v1/breeds/search?q=${query}`, {
+            method: 'GET',
+            headers: Headers
+        })
+
+        if(!res.ok){
+            throw new Error(`Failed to fetch pet: ${res.status} - ${res.statusText}`)
+        }
+        return res.json()
+    }catch (error){
+        console.error('Error fetching breed groups:', error);
+        return [];
+    }
+})
 
 export {
     fetchPets,
     fetchPetById,
-    fetchFeaturedPet
+    fetchFeaturedPet,
+    fetchQueryResult
+
 }

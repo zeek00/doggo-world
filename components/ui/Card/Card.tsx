@@ -23,7 +23,9 @@ export default async function Card({pet, path}: { pet: Pet, path: string }) {
                     petObject.breeds.map((pet: Breed) => (
                         <span key={pet.id} className={styles.detailsBox}>
                             <h2>{pet.name}</h2>
-                            <Link  href={`/breeds/${pet.breed_group}`} className={styles.breedGroup}>{pet.breed_group}</Link>
+                            {pet.breed_group && (<Link href={`/breeds/${pet.breed_group}`}
+                                   className={styles.breedGroup}>{pet.breed_group}</Link>)}
+                            {!pet.breed_group && (<p className={styles.breedGroup}>??</p>)}
                             <p>Life Span: {pet.life_span}</p>
                         </span>
 
