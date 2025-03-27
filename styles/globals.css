@@ -3,25 +3,52 @@
 @tailwind utilities;
 
 :root {
-  --plain: #ffffff;
-  --bittersweet: rgba(238, 99, 82, 1);
-  --emerald: rgba(89, 205, 144, 1);
-  --picton-blue: rgba(63, 167, 214, 1);
-  --xanthous: rgba(250, 192, 94, 1);
-  --atomic-tangerine: rgba(247, 157, 132, 1);
+  --plain: #fff;
+  --background: #0a0a0a;
+  --red-shade: rgb(220, 20, 60);
+  --green-shade: rgb(89, 205, 144);
+  --blue-shade: rgb(63, 167, 214);
+  --yellow-shade: rgb(250, 192, 94);
+  --peach-shade: rgb(247, 157, 132);
+  --border-radius: 1.7rem;
 
 }
+
 
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--plain);
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  position: relative;
 }
+
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('../public/svg/bg-mobile.svg') no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.2; /* Adjust opacity */
+  z-index: -1;
+}
+
+input[type="search" i]::-webkit-search-cancel-button {
+  filter: invert(85%) sepia(50%) saturate(500%) hue-rotate(320deg);
+  opacity: 0.7;
+  cursor: pointer;
+}
+@media screen and (min-width: 968px ){
+  body::before {
+    background: url('../public/svg/bg-desktop.svg');
+  }
+}
+

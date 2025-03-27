@@ -1,10 +1,40 @@
+@keyframes bounceThenSpin {
+    0%, 8%, 30% {
+        transform: translateY(0);
+    }
+    5% {
+        transform: translateY(-15px);
+    }
+    20% {
+        transform: translateY(-18px);
+    }
+    18% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+}
+
 @keyframes colorCycle {
-    0% { color: var(--bittersweet); }
-    33% { color: var(--emerald); }
-    66% { color: var(--picton-blue); }
-    100% { color: var(--xanthous); }
+    0% { color: var(--red-shade); }
+    33% { color: var(--green-shade); }
+    66% { color: var(--blue-shade); }
+    100% { color: var(--yellow-shade); }
 }
 
 .colorAnimate {
-    animation: colorCycle 5s infinite linear;
+    animation:
+            bounceThenSpin 2s ease-in-out infinite, colorCycle 5s linear infinite ;
 }

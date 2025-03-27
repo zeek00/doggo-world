@@ -1,0 +1,75 @@
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;
+    color: var(--plain);
+    padding: 1rem 0;
+}
+
+.card{
+    position: relative;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--peach-shade);
+    width: 250px;
+    color: #6e6767;
+    height: fit-content;
+}
+
+
+.card h2{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    max-width: 100px;
+    color: var(--plain);
+    cursor: pointer;
+}
+
+.card .discover{
+    background: var(--red-shade);
+    margin-top: 0.8rem;
+    padding: 0.2rem 0.8rem;
+    width: fit-content;
+    border-radius: 0.2rem;
+    border: 1px solid var(--plain);
+    transition: 0.5s ease-in-out;
+    transform: scale(1);
+    color: var(--plain);
+
+}
+
+.card .discover:hover{
+    box-shadow: 1px 1px 4px 1px var(--plain);
+}
+
+.card .img{
+    position: absolute;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+
+}
+
+@media screen and (min-width: 968px ){
+    .container {
+        gap: 3rem;
+        width: 97%;
+        margin: 0 auto;
+    }
+    .card{
+        width: 289px;
+
+
+    }
+    .card h2{
+        max-width: 100%;
+    }
+
+}

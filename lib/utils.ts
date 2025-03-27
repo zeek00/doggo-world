@@ -26,7 +26,12 @@ const getPetCategory = async (group: string, pets: Pet[]) =>{
 
 }
 
+const getPetsByGroup = async (group: string, pets: Pet[]) =>{
+    return pets.filter(( pet: Pet ) => pet['breed_group'] === group)
+}
 
 
 
-export {getAllBreedGroups, getPetCategory, getFeaturedPet}
+
+
+export {getAllBreedGroups, getPetCategory, getFeaturedPet, getPetsByGroup}

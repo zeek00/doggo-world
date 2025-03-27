@@ -1,7 +1,18 @@
-import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    compress: false,
+    images: {
+        unoptimized: true,
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'cdn2.thedogapi.com',
+                port: '',
+                pathname: '**',
+            }
+        ]
+    }
+}
 
-export default nextConfig;
+module.exports = nextConfig
