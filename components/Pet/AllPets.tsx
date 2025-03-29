@@ -8,7 +8,7 @@ import {Pet} from "@/types/pets"
 const AllPets = async({page}: { page: string }) => {
     try{
         const pages = Number(page) || 1; // Get page number from URL
-        const allPets = await fetchPets(pages, 21); //
+        const allPets = await fetchPets(pages, 22); //
         return (
             <div className={styles.all}>
                 <div className={styles.card}>
@@ -29,7 +29,7 @@ const AllPets = async({page}: { page: string }) => {
                             <button>{'<'}</button>
                         </Link>
                     )}
-                    {allPets.length === 20 && (
+                    {allPets.length === 21 && (
                         <Link href={`?page=${pages + 1}`}>
                             <button> {'>'} </button>
                         </Link>

@@ -1,6 +1,6 @@
 import {ReactNode} from "react";
 import type { Metadata } from "next";
-import {indieFlower} from '@/public/fonts/fonts';
+import {indieFlower, montserrat} from '@/public/fonts/fonts';
 import "../styles/globals.css";
 import Nav from "@/components/Nav/Nav";
 import Footer from "@/components/Footer/Footer";
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: { children: ReactNode}) {
     return (
       <html lang="en">
-      <body className={`${indieFlower.className} flex flex-col min-h-screen`}>
+      <body className={`${indieFlower.className} ${montserrat.className} flex flex-col min-h-screen`}>
           <span className=" top-0 w-full z-10">
             <Nav/>
           </span>
@@ -31,7 +31,7 @@ export default function RootLayout({children}: { children: ReactNode}) {
           {<span>
               <ConditionalRender/>
           </span>}
-
+a
 
           <main className="flex-grow ">
                   {children}

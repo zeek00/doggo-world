@@ -1,12 +1,24 @@
+"use client"
+import {usePathname} from "next/navigation";
 import Link from "next/link";
 import styles from './Button.module.css'
-import { PiDogFill } from "react-icons/pi";
-import {LinkProps} from "@/types/props"
+import { GiSittingDog } from "react-icons/gi";
 
 
-export default function Button({type,to,hoverColor, borderColor, close} : LinkProps) {
+import {LinkProps} from "@/types/props";
+import {montserrat} from "@/public/fonts/fonts";
+
+
+export default function Button({type,to,hoverColor, borderColor, bgColor, close} : LinkProps) {
+    const pathname = usePathname();
+
     return (
-        <div className={`${hoverColor} ${styles.linkContainer}`}>
+        <div className={
+            ` ${styles.linkContainer}
+            ${hoverColor}
+            ${pathname.startsWith(`/${to}`) && bgColor }
+            `
+        }>
             {
                 type === 'nav' &&
                 <span className={styles.links}>
@@ -19,10 +31,11 @@ export default function Button({type,to,hoverColor, borderColor, close} : LinkPr
                 <span className={` 
                    
                     ${styles.featureBtn}
-                    border rounded-md
+                    ${montserrat.className}
+                      animate__fadeIn
                     `}
                 >
-                    <span><PiDogFill /></span>
+                    <span><GiSittingDog /></span>
                     <Link href={to}>Featured</Link>
                 </span>
 

@@ -5,9 +5,9 @@ import Burger from "@/components/Nav/Burger";
 import {ButtonProps} from "@/types/props";
 
 const links: ButtonProps[] = [
-    {to:'about', hoverColor:'hover:bg-[var(--peach-shade)]', borderColor:'border-[var(--peach-shade)]'},
-    {to:'pets', hoverColor:'hover:bg-[var(--green-shade)]', borderColor:'border-[var(--green-shade)]'},
-    {to:'breeds', hoverColor:'hover:bg-[var(--red-shade)]', borderColor:'border-[var(--red-shade)]'},
+    {to:'about', bgColor: 'bg-[var(--peach-shade)]', hoverColor:'hover:bg-[var(--peach-shade)]', borderColor:'border-[var(--peach-shade)]'},
+    {to:'pets', bgColor: 'bg-[var(--green-shade)]', hoverColor:'hover:bg-[var(--green-shade)]', borderColor:'border-[var(--green-shade)]'},
+    {to:'breeds', bgColor: 'bg-[var(--red-shade)]', hoverColor:'hover:bg-[var(--red-shade)]', borderColor:'border-[var(--red-shade)]'},
 ];
 
 export default function Nav() {
@@ -25,7 +25,7 @@ export default function Nav() {
                     <span className={styles.btn}>
                        {links.map(
                            (link: ButtonProps) => (
-                              <Button key={link.to} type='nav' hoverColor={link.hoverColor} to={link.to}/>
+                              <Button key={link.to} type='nav' hoverColor={link.hoverColor} bgColor={link.bgColor} to={link.to}/>
                            ))
                        }
                     </span>

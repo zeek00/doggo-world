@@ -1,8 +1,16 @@
 .footer {
     display: flex;
     justify-content: center;
+    align-items: center;
     background: var(--peach-shade);
     padding: 1rem 0;
     box-shadow: 1px 1px 4px 1px var(--blue-shade);
+
+}
+
+@media screen and (max-width: 768px ) {
+    .footer p{
+        font-size: 0.7rem;
+    }
 
 }
