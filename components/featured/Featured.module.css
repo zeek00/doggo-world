@@ -34,6 +34,7 @@
 
 .mobile .container .detailsBox .col1{
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
     gap: 0.5rem;
     color: var(--background);
@@ -72,6 +73,7 @@
 }
 .actions{
     display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 1.4rem;
     margin: 1rem 0;
@@ -138,6 +140,9 @@
 @media screen and (min-width: 768px ) {
     .container {
         width: 90%;
+        margin: 0 auto;
+    }
+    .imageBox{
         margin: 0 auto;
     }
 
