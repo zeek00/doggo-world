@@ -4,10 +4,10 @@ import Image from "next/image";
 import {Breed, FeaturedProp} from "@/types/pets";
 import { FaHeart } from "react-icons/fa";
 import Link from "next/link";
+import {montserrat} from "@/public/fonts/fonts";
 
 
 const Featured = async ({featured}: { featured: FeaturedProp })=>{
-
 
         return (
             <div className={styles.mobile}>
@@ -17,7 +17,8 @@ const Featured = async ({featured}: { featured: FeaturedProp })=>{
                         <Image
                             src={featured.url}
                             alt={'pet image'}
-                            fill
+                            width={featured.width}
+                            height={featured.height}
                             className={styles.image}
                             priority
                         />
@@ -27,35 +28,36 @@ const Featured = async ({featured}: { featured: FeaturedProp })=>{
                         <span key={pet.id} className={styles.detailsBox}>
                              <span className={styles.col1}>
                                 <p>{pet.name}</p>
+                                <Link className={montserrat.className} href={`/breeds/${pet.breed_group}`}>{`(${pet.breed_group})`}</Link>
+                             </span>
+
+                            <span className={`${styles.col2} ${montserrat.className}`}>
+                                <div className={styles.weight}>
+                                    <h3>Weight</h3>
+                                    <p>imperial: {pet.weight.imperial} metric: {pet.weight.metric}</p>
+                                </div>
+                                <div className={styles.lifeSpan}>
+                                    <h3>Life span</h3>
+                                    <p>{pet.life_span}</p>
+                                </div>
+                                <div className={styles.height}>
+                                    <h3>Height</h3>
+                                    <p>imperial: {pet.height.imperial} metric: {pet.height.metric}</p>
+                                </div>
+                            </span>
+
+                            <p className={`${montserrat.className} ${styles.temperament}`}> Temperament: {pet.temperament}</p>
+
+                            <span className={`${styles.actions} ${montserrat.className}`}>
                                 <span className={styles.likeIcon}>
                                     <FaHeart/>
                                 </span>
-                             </span>
+                                <Link className={styles.actionLink} href="/pets" > Explore </Link>
 
-                            <span className={styles.breedGroup}>
-                                   <Link href={`/breeds/${pet.breed_group}`}>{pet.breed_group}</Link>
                             </span>
 
-                            {pet.bred_for &&
-                                <span className={styles.bredFor}>
-                                    <label>Bred for:</label>
-                                    <p>{`"${pet.bred_for}"`}</p>
-                                </span>
-                            }
 
-                            {pet.life_span &&
-                                <span className={styles.lifeSpan}>
-                                    <label>Life Span:</label>
-                                    <p>{`${pet.life_span}`}</p>
-                                </span>
-                            }
 
-                            {pet.temperament &&
-                                <span className={styles.temperament}>
-                                    <label>Temperament:</label>
-                                    <p>{`"${pet.temperament}"`}</p>
-                                </span>
-                            }
                         </span>
                     ))}
                 </div>

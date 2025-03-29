@@ -6,10 +6,10 @@
     color: var(--plain);
     padding: 0;
     height: auto;
-    border-radius: var(--border-radius);
+    border-radius: 0.7rem;
     margin: 1rem auto;
     /*border: 1px solid var(--blue-shade);*/
-    box-shadow: 1px 1px 4px 1px var(--peach-shade);
+    box-shadow: 1px 1px 4px 1px var(--yellow-shade);
 }
 
 .overlay {

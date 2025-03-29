@@ -5,12 +5,13 @@
 :root {
   --plain: #fff;
   --background: #0a0a0a;
-  --red-shade: rgb(220, 20, 60);
+  --red-shade: rgba(220, 20, 60, 0.8);
   --green-shade: rgb(89, 205, 144);
   --blue-shade: rgb(63, 167, 214);
   --yellow-shade: rgb(250, 192, 94);
   --peach-shade: rgb(247, 157, 132);
-  --border-radius: 1.7rem;
+  --border-radius: 0 0.7rem 0.7rem 0.7rem;
+;
 
 }
 
