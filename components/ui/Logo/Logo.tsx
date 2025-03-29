@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./Logo.module.css";
 
 
 export default function Logo() {
@@ -12,7 +11,6 @@ export default function Logo() {
                     alt="logo"
                     width={50}
                     height={50}
-                    className={styles.image}
                     priority
                 />
             </Link>
