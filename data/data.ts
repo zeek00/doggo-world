@@ -7,6 +7,16 @@ import {BreedGroups} from "@/types/breedGroups";
     {to:'breeds', hoverColor:'hover:bg-[var(--yellow-shade)]', borderColor:'border-[var(--yellow-shade)]'},
 ];
 
+const groups: string[] = [
+    'toy',
+    'hound',
+    'terrier',
+    'working',
+    'mixed',
+    'sporting',
+    'herding',
+    'non-sporting',
+]
 
 
  const breedGroups: BreedGroups = {
@@ -61,4 +71,4 @@ import {BreedGroups} from "@/types/breedGroups";
      },
 };
 
-export {links, breedGroups}
+export {links, breedGroups, groups}

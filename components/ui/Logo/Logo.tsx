@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Logo() {
     return (
-        <p style={{padding: '1rem 0'}}>
+        <p style={{padding: '0.5rem 0'}}>
             <Link href="/">
                 <Image
                     src="/svg/logo.svg"

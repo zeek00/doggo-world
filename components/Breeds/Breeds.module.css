@@ -1,4 +1,6 @@
 .container {
+    width: 90%;
+    margin: 0 auto;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -60,11 +62,11 @@
 @media screen and (min-width: 968px ){
     .container {
         gap: 3rem;
-        width: 97%;
+        width: 90%;
         margin: 0 auto;
     }
     .card{
-        width: 289px;
+        width: 18rem;
 
 
     }

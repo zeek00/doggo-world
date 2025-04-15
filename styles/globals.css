@@ -10,7 +10,7 @@
   --blue-shade: rgb(63, 167, 214);
   --yellow-shade: rgb(250, 192, 94);
   --peach-shade: rgb(247, 157, 132);
-  --border-radius: 0 0.7rem 0.7rem 0.7rem;
+  --border-radius: 0.7rem;
 ;
 
 }
@@ -23,6 +23,8 @@
 }
 
 body {
+  cursor: url('../public/svg/paw.png') 16 16, auto;
+  background-color: var(--blue-shade);
   color: var(--plain);
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -36,9 +38,9 @@ body::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: url('../public/svg/bg-mobile.svg') no-repeat center center fixed;
+  background: url('../public/svg/bg-mobile-white.svg') no-repeat center center fixed;
   background-size: cover;
-  opacity: 0.2; /* Adjust opacity */
+  opacity: 0.5; /* Adjust opacity */
   z-index: -1;
 }
 
@@ -49,7 +51,8 @@ input[type="search" i]::-webkit-search-cancel-button {
 }
 @media screen and (min-width: 968px ){
   body::before {
-    background: url('../public/svg/bg-desktop.svg');
+    background: url('../public/svg/bg-desktop-white.svg');
+    opacity: 0.3;
   }
 }
 
