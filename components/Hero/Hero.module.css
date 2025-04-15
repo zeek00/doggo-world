@@ -4,7 +4,6 @@
     /*background-size: cover;*/
     min-height: 75vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -47,8 +46,14 @@
 
 @media screen and (min-width: 968px ){
     .textAndCTA{
+        display: flex;
+        flex-direction: column;
         padding: 2rem;
+        justify-content: center;
+        align-items: center;
         width: 40%;
+        min-height: 4rem;
+        font-weight: 900;
     }
     .svg{
         width: 60%;
