@@ -1,12 +1,12 @@
 import {preload} from "@/lib/api";
-import Loading from "@/components/loader/Loading";
+import Hero from "@/components/Hero/Hero";
 
 export default async function Home() {
     preload();
 
     return (
-        <div className={`flex justify-center align-items-center mt-20 `}>
-            <Loading/>
+        <div className={`flex justify-center align-items-center `}>
+            <Hero/>
         </div>
     );
 }

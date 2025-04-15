@@ -31,7 +31,6 @@ export default function RootLayout({children}: { children: ReactNode}) {
           {<span>
               <ConditionalRender/>
           </span>}
-a
 
           <main className="flex-grow ">
                   {children}

@@ -15,8 +15,8 @@ export default function Button({type,to,hoverColor, borderColor, bgColor, close}
     return (
         <div className={
             ` ${styles.linkContainer}
-            ${hoverColor}
-            ${pathname.startsWith(`/${to}`) && bgColor }
+              ${hoverColor}
+              ${pathname.startsWith(`/${to}`) && bgColor }
             `
         }>
             {

@@ -1,0 +1,64 @@
+.container {
+    width: 100%;
+    /*background: url("/svg/hero-desktop.svg") no-repeat center;*/
+    /*background-size: cover;*/
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: var(--plain);
+    flex-flow: row wrap;
+    /*outline: 1px solid black;*/
+}
+.textAndCTA{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 4rem;
+    font-weight: 900;
+}
+
+.textAndCTA h1{
+    font-size: 3.5rem;
+    line-height: 3.6rem;
+    text-align: center;
+}
+.textAndCTA button{
+    border: 1px solid var(--plain);
+    font-size: 1rem;
+    margin: 1rem auto;
+    width: 30%;
+    border-radius: 3rem;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+
+}
+.textAndCTA button:hover{
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+    background-color: var(--plain);
+    border: 2px solid var(--blue-shade);
+
+    color: var(--blue-shade);
+}
+
+
+
+@media screen and (min-width: 968px ){
+    .textAndCTA{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        min-height: 4rem;
+        font-weight: 900;
+    }
+    .svg{
+        width: 60%;
+        margin: 1rem auto;
+        min-height: 4rem;
+    }
+
+}

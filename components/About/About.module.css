@@ -4,8 +4,13 @@
     justify-content: center;
     align-items: center;
     padding: 3rem 0;
+    color: var(--plain);
 }
 
+.container h1{
+    font-size: 2rem;
+    font-weight: 700;
+}
 
 
 .container .mobile {
@@ -37,6 +42,10 @@
     .container {
         margin: 0 auto;
         padding: 4rem 0;
+    }
+    .container h1{
+        font-size: 4rem;
+        font-weight: 700;
     }
     .container .desktop{
         display: flex;
