@@ -27,7 +27,7 @@ const Featured = async ({featured}: { featured: FeaturedProp })=>{
                     {featured.breeds.map((pet: Breed) => (
                         <span key={pet.id} className={styles.detailsBox}>
                              <span className={styles.col1}>
-                                <p>{pet.name}</p>
+                                <h1>{pet.name}</h1>
                                 <Link className={montserrat.className} href={`/breeds/${pet.breed_group}`}>{`(${pet.breed_group})`}</Link>
                              </span>
 
@@ -46,7 +46,7 @@ const Featured = async ({featured}: { featured: FeaturedProp })=>{
                                 </div>
                             </span>
 
-                            <p className={`${montserrat.className} ${styles.temperament}`}> Temperament: {pet.temperament}</p>
+                            <p className={`${montserrat.className} ${styles.temperament}`}> <span>Temperament:</span><br/> {pet.temperament}</p>
 
                             <span className={`${styles.actions} ${montserrat.className}`}>
                                 <span className={styles.likeIcon}>
