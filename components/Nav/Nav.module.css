@@ -1,26 +1,24 @@
 
 .desktopNav {
     justify-content: space-around;
-    width: 90%;
+    width: 100%;
     background: var(--green-shade);
     color: var(--plain);
     padding: 0;
     height: auto;
-    /*border-radius: 2rem;*/
-    /*margin: 1rem auto;*/
     margin: 0 auto;
-    /*border: 1px solid var(--blue-shade);*/
-    box-shadow: 1px 1px 4px 1px var(--yellow-shade);
+    box-shadow: 1px 1px 4px 1px var(--peach-shade);
+
 }
 
 .overlay {
-    pointer-events: none; /* Prevents the overlay from blocking LeftNav */
+    pointer-events: none;
 }
 
 
 .mobileNav{
     width: 100%;
-    background: var(--blue-shade);
+    background: var(--green-shade);
     color: var(--plain);
     z-index: 10;
     display: flex;
@@ -55,7 +53,7 @@
     z-index: 3;
     top: 3.2rem!important;
     width: 50%;
-    background: var(--blue-shade);
+    background: var(--green-shade);
     display: flex;
     flex-direction: column;
     gap: 15px;
