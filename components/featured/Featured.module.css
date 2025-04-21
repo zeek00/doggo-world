@@ -37,11 +37,11 @@
     flex-flow: row wrap;
     align-items: center;
     gap: 0.5rem;
-    color: var(--background);
+    color: var(--plain);
 
 }
-.mobile .container .detailsBox .col1 p{
-    font-size: 1.5rem;
+.mobile .container .detailsBox .col1 h1{
+    font-size: 2rem;
     text-transform: capitalize;
 }
 
@@ -126,13 +126,16 @@
 }
 
 .height{
-    background: var(--blue-shade);
+    background: var(--yellow-shade);
 
 }
 
 .temperament{
-    color: var(--background);
+    color: var(--plain);
     font-size: 0.8rem;
+}
+.temperament span{
+    font-size: 1.2rem;
 }
 
 
@@ -173,6 +176,49 @@
 
 @media screen and (min-width: 968px ){
 
+    .mobile{
+        height: 70vh;
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
 
 
-}
+    }
+    .mobile .container{
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+
+    }
+
+    .imageBox{
+        width: auto;
+        height: auto;
+    }
+
+    .detailsBox{
+        width: 50%;
+        padding: 0 1rem;
+    }
+    .detailsBox h1{
+        font-size: 3rem;
+    }
+    .detailsBox .col2 div {
+        flex: 1 1 100px;
+        gap: 20px;
+        padding: 1rem;
+        height: fit-content;
+    }
+    .actions{
+        justify-content: space-between;
+    }
+    .temperament span{
+        font-size: 1.6rem;
+    }
+
+
+
+    }
