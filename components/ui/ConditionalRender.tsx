@@ -5,7 +5,7 @@ import SearchForm from "@/components/Search/SearchForm";
 const ConditionalRender = ({}) => {
     const pathname = usePathname();
 
-    const prefixes = ['/pets', '/search', '/featured'];
+    const prefixes = ['/pets', '/search', '/featured', '/breeds/'];
 
     const matches = prefixes.some(prefix => pathname.startsWith(prefix));
 
