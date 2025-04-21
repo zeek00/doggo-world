@@ -22,7 +22,7 @@ export default function PageError({ error, reset } : Readonly<{
             <span className={styles.box}></span>
             <span><FaShieldDog/></span>
             <h2>Oops! This pup ran off...</h2>
-            <p>Looks like the page you're sniffing for doesn't exist. Try heading back to the main kennel !</p>
+            <p>Looks like the page you&apos;re sniffing for doesn&apos;t exist. Try heading back to the main kennel !</p>
             <button className={styles.reset} onClick={() => reset()}>Try again</button>
             <button onClick={goBack}>Return to Previous</button>
         </div>
