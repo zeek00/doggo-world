@@ -37,7 +37,7 @@ const ScrollToTop = () => {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    backgroundColor: 'var(--blue-shade)',
+                    backgroundColor: 'var(--red-shade)',
                     transition: ' 0.5s ease-in-out',
                     color: '#fff',
                     width: '45px',
