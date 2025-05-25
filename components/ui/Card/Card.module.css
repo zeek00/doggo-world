@@ -42,17 +42,18 @@
 
 }
 .detailsBox h2{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: var(--peach-shade);
 }
 .detailsBox p{
-    font-size: 0.8rem;
+    font-size: var(--font-mobile);
     text-transform: lowercase;
     color: var(--green-shade);
 
 }
 .detailsBox .breedGroup{
     color: var(--blue-shade);
+    font-size: var(--font-mobile);
     cursor: pointer;
     text-decoration: underline;
     text-transform: uppercase;

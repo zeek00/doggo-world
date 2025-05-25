@@ -114,7 +114,7 @@
 }
 
 .detailsBox .col2 p{
-    font-size: 0.6rem;
+    font-size: 0.8rem;
 }
 
 .weight{
@@ -132,7 +132,7 @@
 
 .temperament{
     color: var(--plain);
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 .temperament span{
     font-size: 1.2rem;
