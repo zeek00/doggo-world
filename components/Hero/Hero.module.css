@@ -22,14 +22,15 @@
 
 .textAndCTA h1{
     font-size: 3.5rem;
-    line-height: 3.6rem;
+    line-height: 4.5rem;
     text-align: center;
 }
 .textAndCTA button{
     border: 1px solid var(--plain);
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin: 1rem auto;
-    width: 30%;
+    width: fit-content;
+    padding: 0 0.7rem;
     border-radius: 3rem;
     transition: background-color 0.3s ease-in, color 0.3s ease-in;
 
@@ -54,6 +55,16 @@
         width: 40%;
         min-height: 4rem;
         font-weight: 900;
+    }
+    .textAndCTA h1{
+        font-size: 4.5rem;
+        line-height: 5rem;
+
+    }
+    .textAndCTA button{
+        font-size: 1.5rem;
+
+
     }
     .svg{
         width: 60%;

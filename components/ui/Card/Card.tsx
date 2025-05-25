@@ -27,7 +27,7 @@ export default async function Card({pet, path}: { pet: Pet, path: string }) {
                                                        className={`${montserrat.className} ${styles.breedGroup}`}>{pet.breed_group}</Link>)}
                             {!pet.breed_group && (<p className={styles.breedGroup}>??</p>)}
                             <h2>{pet.name}</h2>
-                            <p  className={`${montserrat.className}`}>Life Span: {pet.life_span}</p>
+                            <p className={`${montserrat.className}`}>Life Span: {pet.life_span}</p>
                         </span>
 
                     ))
